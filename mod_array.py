@@ -1,0 +1,10 @@
+a=list(map(int,input().split()))
+b=int(input())
+s=len(a)
+p=1
+sum=0
+while(s):
+    sum+=((a[s-1]%b)*(p))%b
+    p=(10*p)%b
+    s=s-1
+print(sum%b) 
