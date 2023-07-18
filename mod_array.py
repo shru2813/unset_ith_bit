@@ -1,10 +1,12 @@
 a=list(map(int,input().split()))
-b=int(input())
 s=len(a)
 p=1
 sum=0
 while(s):
-    sum+=((a[s-1]%b)*(p))%b
-    p=(10*p)%b
+    sum+=((a[s-1]%3)*(p))%3
+    p=(10*p)%3
     s=s-1
-print(sum%b) 
+if (sum%3==0):
+    print('1')
+else:
+    print('0')    
